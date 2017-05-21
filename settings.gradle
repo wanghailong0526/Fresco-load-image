@@ -1,1 +1,1 @@
-include ':prescoloadimage', ':base-imageloader'
+include ':frescoloadimage', ':base-imageloader'

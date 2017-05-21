@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         img3 = (SimpleDraweeView) findViewById(R.id.img3);
         img4 = (SimpleDraweeView) findViewById(R.id.img4);
         FrescoUtil.loadCircleImage(img1, url, R.mipmap.ic_launcher);
+        FrescoUtil.loadImage(img2, url, R.mipmap.ic_launcher);
+        FrescoUtil.loadRoundImage(img3, url, 10, R.mipmap.ic_launcher);
+        FrescoUtil.loadTopRoundImage(img4, url, 30, R.mipmap.ic_launcher);
 
     }
 }
