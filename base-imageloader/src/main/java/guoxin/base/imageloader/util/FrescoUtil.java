@@ -15,7 +15,7 @@ import java.io.File;
 
 public class FrescoUtil {
 
-    private static String baseUrl = "http://image.91test-cloud.bj/";
+    private static String baseUrl = "";
 
     public static void setImageBaseUrl(String baseUrl) {
         FrescoUtil.baseUrl = baseUrl;
