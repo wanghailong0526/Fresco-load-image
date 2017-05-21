@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="guoxin.base.imageloader">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--<application-->
+        <!--android:name="debug.been.App"-->
+        <!--android:allowBackup="true"-->
+        <!--android:label="ImageLoader"-->
+        <!--android:supportsRtl="true"-->
+        <!--android:theme="@style/AppTheme">-->
+        <!--<activity android:name="debug.BindSimpleDraweeActivity">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+    <!--</application>-->
+
+</manifest>

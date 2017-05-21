@@ -1,0 +1,75 @@
+ext {
+    isModule = false
+}
+
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+android {
+    compileSdkVersion ANDROID_COMPILE_SDK_VERSION as int
+    buildToolsVersion ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion ANDROID_MIN_SDK_VERSION as int
+        targetSdkVersion ANDROID_TARGET_SDK_VERSION as int
+        versionCode 109
+        versionName "1.0.9"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+//                res.srcDirs = [
+//                        '/src/main/res/'
+//                ]
+            } else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+                //release模式下 排除debug文件夹中的所有Java文件
+                java {
+                    exclude 'debug/**'
+                }
+//                res.srcDirs = [
+//                        '/src/main/resrelease'
+//                ]
+
+
+            }
+        }
+
+    }
+}
+
+dependencies {
+    compile 'com.facebook.fresco:imagepipeline:0.13.0'
+    compile 'com.facebook.fresco:fresco:0.13.0'
+    compile "com.android.support:appcompat-v7:" + ANDROID_SUPPORT_VERSION as String
+    compile('cn.finalteam:toolsfinal:1.1.4') {
+        exclude module: 'support' //by artifact name
+        exclude group: 'com.android.support' //by group
+//        exclude group: 'org.unwanted', module: 'iAmBuggy' //by both name and group
+    }
+    compile('com.facebook.fresco:imagepipeline:0.13.0') {
+        exclude module: 'support' //by artifact name
+        exclude group: 'com.android.support' //by group
+//        exclude group: 'org.unwanted', module: 'iAmBuggy' //by both name and group
+    }
+    compile('com.facebook.fresco:fresco:0.13.0') {
+        exclude module: 'support' //by artifact name
+        exclude group: 'com.android.support' //by group
+//        exclude group: 'org.unwanted', module: 'iAmBuggy' //by both name and group
+    }
+    compile 'com.facebook.fresco:animated-gif:0.13.0'
+
+}
+
+

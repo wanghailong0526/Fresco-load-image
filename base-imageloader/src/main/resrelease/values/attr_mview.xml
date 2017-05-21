@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- segment-->
+    <declare-styleable name="MView">
+        <attr name="url" format="string" />
+        <attr name="round" format="integer" />
+        <attr name="defaultDrawable" format="reference" />
+        <attr name="resourceDrawable" format="reference" />
+        <attr name="circlRresourceDrawable" format="reference" />
+        <attr name="roundResourceDrawable" format="reference" />
+        <attr name="topRoundDrawable" format="reference" />
+        <attr name="topRoundUrl" format="string" />
+        <attr name="roundUrl" format="string" />
+        <attr name="circleUrl" format="string" />
+
+    </declare-styleable>
+</resources>
